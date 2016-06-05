@@ -2,36 +2,40 @@
 \frame{
 	\frametitle{Shiny: Analyses $\rightarrow$ Interactive Web Applications}
 
+	Preliminaries 
 	\begin{itemize}
-		\item R package. Build apps straight from R. (No web dev skills needed!)
+		\item Shiny is an R package that makes it easy to build apps
 		\item \texttt{install.packages("shiny")}
-		
+	\end{itemize}
 
+	Structure of a Shiny app: two R scripts saved together in a directory
+	\begin{itemize}
+		\item Each app needs its own directory
+		\item \texttt{ui.R} : controls layout and appearance of app
+		\item \texttt{server.R}: contains instructions needed to build app
 	\end{itemize}
 
 	http://shiny.rstudio.com/
 	http://shiny.rstudio.com/tutorial/lesson1/
+	
+}
 
-	
-	% Repositories
-	% \begin{itemize}
-	% 	\item CRAN (as of today) has \textbf{6690} packages for modeling, visualization, etc.
-	% 	\item Bioconductor (as of today) has \textbf{1024} packages for analysis of high-throughput genomic data
-	% \end{itemize} 
-	
-	% \vspace{\baselineskip}
-	
-	% Download and load packages with 
-	% \begin{itemize}
-	% 	\item \texttt{install.packages()}
-	% 	\item \texttt{library()}
-	% \end{itemize} 
-	
-	% \vspace{\baselineskip}
-	
-	% %Useful packages include \texttt{igraph,lattice,ggplot2,dplyr}
+\frame{
+	\frametitle{Running a Shiny app}
+
+	Running a Shiny app
+	\begin{itemize}
+		\item R \textbf{session} will be busy while Shiny app is active
+		\item Get R session back $\rightarrow$ hit escape
+		\item If Shiny app is in a directory called \texttt{my-app}:
+			\begin{enumerate}
+				\item library(shiny)
+				\item runApp(`my-app')
+			\end{enumerate}
+	\end{itemize}
 
 
-	%
-	
+
+	http://shiny.rstudio.com/tutorial/lesson1/
+
 }
