@@ -1,12 +1,13 @@
 
 
 \frame{
-	\frametitle{Example}
-	
+	\frametitle{'Hello Shiny' Example}
 
+	 http://shiny.rstudio.com/tutorial/lesson1/
 
+	 \begin{center}OR\end{center}
 
-
+	 runExample("01\_hello") 
 
 
 
@@ -14,12 +15,10 @@
 }
 
 
-
 \frame{
 	\frametitle{Structure of a Shiny app}
 
-
-	Structure of a Shiny app: two R scripts saved together in a directory
+	Two R scripts saved together in a directory
 	\begin{itemize}
 		\item Each app needs its own directory
 		\item \texttt{ui.R} : controls layout and appearance of app
@@ -28,10 +27,54 @@
 
 	% http://shiny.rstudio.com/
 	% http://shiny.rstudio.com/tutorial/lesson1/
+
+}
+
+
+\frame{
+	\frametitle{ui: Application layout / widgets & R objects}
+
+	`Hello Shiny' Example
+	\begin{itemize}
+		\item fluidPage, sidebarLayout $\rightarrow$ Define layout
+	\end{itemize}
+
+	
+	Place widgets (eg. slider) and R objects (eg. plot) in layout
+	\begin{itemize}
+		\item widgets: *Input functions: tutorial/lesson3
+		\item widget label : Access widget value
+		\item R objects: *Ouput functions: tutorial/lesson4
+		\itme R object: *Output function argument : match label in server.R
+	\end{itemize}
+
+
+	% 	http://shiny.rstudio.com/articles/layout-guide.html
+
+}
+
+
+\frame{
+	\frametitle{server}
+
+
+	`Hello Shiny' Example
+	\begin{itemize}
+		\item fluidPage, sidebarLayout $\rightarrow$ Define layout
+	\end{itemize}
+
+
 	
 
 
+
+
+
+
+
+
 }
+
 
 
 
