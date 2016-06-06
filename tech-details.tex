@@ -1,6 +1,6 @@
 
 \frame{
-	\frametitle{Shiny}
+	\frametitle{Display reactive output}
 
 	Create reactive output with two step process:
 	\begin{enumerate}
@@ -24,7 +24,7 @@
 
 
 \frame{
-	\frametitle{Shiny}
+	\frametitle{Display reactive output}
 
 	Provide R code to build the object
 	\begin{itemize}
@@ -38,4 +38,28 @@
 	http://shiny.rstudio.com/tutorial/lesson4/
 
 }
+
+
+\frame{
+	\frametitle{Execution}
+
+	Where you put code in server.R determines how many times run
+	\begin{itemize}
+		\item Outside of \texttt{shinyServer{}} : Run once (library,load,source)
+
+		\item In shinyServer run once a user visits app: eg. object records session info
+
+		\item  render : Run each time user changes a widget 
+
+	\end{itemize}
+
+
+	http://shiny.rstudio.com/tutorial/lesson5/
+
+}
+
+
+
+
+
 
