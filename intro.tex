@@ -8,54 +8,45 @@
 		\item \texttt{install.packages("shiny")}
 	\end{itemize}
 
-	Structure of a Shiny app: two R scripts saved together in a directory
+	Running a Shiny app
 	\begin{itemize}
-		\item Each app needs its own directory
-		\item \texttt{ui.R} : controls layout and appearance of app
-		\item \texttt{server.R}: contains instructions needed to build app
+		\item If Shiny app is in a directory called \texttt{my-app}:
+		\begin{enumerate}
+			\item library(shiny)
+			\item runApp(`my-app')
+		\end{enumerate}
+		\item R \textbf{session} will be busy while Shiny app is active
+		\item Get R session back $\rightarrow$ hit escape
 	\end{itemize}
 
-	http://shiny.rstudio.com/
-	http://shiny.rstudio.com/tutorial/lesson1/
+
+	% http://shiny.rstudio.com/
+	% http://shiny.rstudio.com/tutorial/lesson1/
 	
 }
 
-\frame{
-	\frametitle{Running a Shiny app}
-
-	Running a Shiny app
-	\begin{itemize}
-		\item R \textbf{session} will be busy while Shiny app is active
-		\item Get R session back $\rightarrow$ hit escape
-		\item If Shiny app is in a directory called \texttt{my-app}:
-			\begin{enumerate}
-				\item library(shiny)
-				\item runApp(`my-app')
-			\end{enumerate}
-	\end{itemize}
-
-
-	http://shiny.rstudio.com/tutorial/lesson1/
-
-}
 
 
 
 \frame{
 	\frametitle{Copy and modify existing Shiny apps}
 
-	Copy and modify existing Shiny apps !
+	Eleven pre-built Shiny examples: 
 	\begin{itemize}
-		\item Eleven pre-built Shiny examples: http://shiny.rstudio.com/tutorial/lesson1/\#Go Further
+		\item http://shiny.rstudio.com/tutorial/lesson1/\#Go Further
 		\item Each demonstrates a feature of Shiny apps
 		\item Examples open in `showcase' mode with the ui.R and server.R
 		scripts in the display.
-		\item Gallery: http://shiny.rstudio.com/gallery/
+	\end{itemize}
+
+	Gallery: 
+	\begin{itemize}
+		\item http://shiny.rstudio.com/gallery/
 		\item Contains useful examples to learn from ! 
 	\end{itemize}
 
 
-	http://shiny.rstudio.com/tutorial/lesson1/
+	% http://shiny.rstudio.com/tutorial/lesson1/
 
 
 }
