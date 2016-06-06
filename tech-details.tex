@@ -44,7 +44,7 @@
 	\begin{itemize}
 		\item widgets: *Input functions: tutorial/lesson3
 		\item widget label : Access widget value
-		\item R objects: *Ouput functions: tutorial/lesson4
+		\item R objects: *Output functions: tutorial/lesson4
 		\itme R object: *Output function argument : match label in server.R
 	\end{itemize}
 
@@ -60,23 +60,20 @@
 
 	`Hello Shiny' Example
 	\begin{itemize}
-		\item fluidPage, sidebarLayout $\rightarrow$ Define layout
+		\item output\$* in shinyServer{} $\rightarrow$ List of R objects
 	\end{itemize}
 
-
-	
-
-
-
-
-
+	List of R objects
+	\begin{itemize}
+		\item render* functions: tutorial/lesson4
+		\item output*X : X is argument of corresponding Output function in ui.R
+		\item Code is reactive if code in render* includes widget value
+		\item widget value is called with input*Widget Label
+	\end{itemize}
 
 
 
 }
-
-
-
 
 
 
