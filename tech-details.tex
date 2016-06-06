@@ -1,0 +1,36 @@
+
+\frame{
+	\frametitle{Shiny: Analyses $\rightarrow$ Interactive Web Applications}
+
+	Create reactive output with two step process:
+	\begin{enumerate}
+		\item Add an R object to ui.R
+		\item Tell Shiny how to build the object in server.R. The
+		object will be reactive if the code that builds it calls a widget
+		value. 
+	\end{enumerate}
+
+	Add an R object to UI: Output functions. 
+	Place inside panelFunctions like you did with widgets
+	\begin{itemize}
+		\item Family of functions turn R objects into output
+		\item eg. plotOutput, 
+	\end{itemize}
+
+	Provide R code to build the object
+	\begin{itemize}
+		\item Providing R code that builds the object 
+		\item Element name should match the name of the reactive element
+		\item Each entry to output should contain the output of one of Shiny’s render* function
+		\item Shiny will automatically make an object reactive if the object uses an input value
+	\end{itemize}
+
+
+
+
+
+
+	http://shiny.rstudio.com/tutorial/lesson4/
+
+	
+}
