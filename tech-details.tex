@@ -9,9 +9,6 @@
 
 	 runExample("01\_hello") 
 
-
-
-
 }
 
 
@@ -32,20 +29,29 @@
 
 
 \frame{
-	\frametitle{ui: Application layout / widgets & R objects}
+	\frametitle{ui: Application layout / widgets \& R objects}
 
-	`Hello Shiny' Example
+	`Hello Shiny' example layout 
 	\begin{itemize}
-		\item fluidPage, sidebarLayout $\rightarrow$ Define layout
+		\item \texttt{fluidPage}, \texttt{sidebarLayout} $\rightarrow$ Define layout
+		\item Customize layout $\rightarrow$ cf. articles/layout-guide.html
 	\end{itemize}
 
 	
-	Place widgets (eg. slider) and R objects (eg. plot) in layout
+	Place widgets  and R objects  in layout
 	\begin{itemize}
-		\item widgets: *Input functions: tutorial/lesson3
-		\item widget label : Access widget value
-		\item R objects: *Output functions: tutorial/lesson4
-		\itme R object: *Output function argument : match label in server.R
+		\item widgets (eg slider) $\rightarrow$ cf. tutorial/lesson3
+		\begin{itemize}
+			\item \texttt{\*Input} functions create widgets 
+			\item Access widget value in  R object with the \texttt{label} arg
+		\end{itemize}
+
+		\item R object (eg plot) $\rightarrow$ cf. tutorial/lesson4
+		\begin{itemize}
+			\item \texttt{\*Output} functions create R objects
+			\item The function arg has to match label in \texttt{server.R}
+		\end{itemize}
+
 	\end{itemize}
 
 
@@ -55,67 +61,26 @@
 
 
 \frame{
-	\frametitle{server}
+	\frametitle{server: R code that builds objects}
 
 
 	`Hello Shiny' Example
 	\begin{itemize}
-		\item output\$* in shinyServer{} $\rightarrow$ List of R objects
+		\item output\$\* in shinyServer{} $\rightarrow$ List of R objects
 	\end{itemize}
 
 	List of R objects
 	\begin{itemize}
-		\item render* functions: tutorial/lesson4
-		\item output*X : X is argument of corresponding Output function in ui.R
-		\item Code is reactive if code in render* includes widget value
-		\item widget value is called with input*Widget Label
+		\item render\* functions: tutorial/lesson4
+		\item output\*X : X is argument of corresponding Output function in ui.R
+		\item Code is reactive if code in render\* includes widget value
+		\item widget value is called with input\*Widget Label
 	\end{itemize}
 
 
 
 }
 
-
-
-\frame{
-	\frametitle{Display reactive output}
-
-	Create reactive output with two step process:
-	\begin{enumerate}
-		\item Add an R object to ui.R
-		\item Tell Shiny how to build the object in server.R. The
-		object will be reactive if the code that builds it calls a widget
-		value. 
-	\end{enumerate}
-
-	Add an R object to UI: Output functions. 
-	Place inside panelFunctions like you did with widgets
-	\begin{itemize}
-		\item Family of functions turn R objects into output
-		\item eg. plotOutput, 
-	\end{itemize}
-
-
-	http://shiny.rstudio.com/tutorial/lesson4/
-	
-}
-
-
-\frame{
-	\frametitle{Display reactive output}
-
-	Provide R code to build the object
-	\begin{itemize}
-		\item Providing R code that builds the object 
-		\item Element name should match the name of the reactive element
-		\item Each entry to output should contain the output of one of Shiny’s render* function
-		\item Shiny will automatically make an object reactive if the object uses an input value
-	\end{itemize}
-
-
-	http://shiny.rstudio.com/tutorial/lesson4/
-
-}
 
 
 \frame{
