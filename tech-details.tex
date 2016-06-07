@@ -4,8 +4,12 @@
 	\frametitle{'Hello Shiny' Example}
 
 	 http://shiny.rstudio.com/tutorial/lesson1/
+	 \vspace*{\baselineskip} % --------------------------------------------------
+
 
 	 \begin{center}OR\end{center}
+	 \vspace*{\baselineskip} % --------------------------------------------------
+
 
 	 runExample("01\_hello") 
 
@@ -29,7 +33,7 @@
 
 
 \frame{
-	\frametitle{ui: Application layout / widgets \& R objects}
+	\frametitle{ui: Application layout}
 
 	`Hello Shiny' example layout 
 	\begin{itemize}
@@ -37,25 +41,35 @@
 		\item Customize layout $\rightarrow$ cf. articles/layout-guide.html
 	\end{itemize}
 
-	
-	Place widgets  and R objects  in layout
+
+	% 	http://shiny.rstudio.com/articles/layout-guide.html
+
+}
+
+\frame{
+	\frametitle{ui: widgets \& R objects}
+
+
+
+	\textbf{Place widgets  and R objects  in layout}
+	\vspace*{\baselineskip} % --------------------------------------------------
+
 	\begin{itemize}
 		\item widgets (eg slider) $\rightarrow$ cf. tutorial/lesson3
 		\begin{itemize}
 			\item \texttt{\*Input} functions create widgets 
-			\item Access widget value in  R object with the \texttt{label} arg
+			\item Access widget value in R object with the \texttt{label} arg
 		\end{itemize}
 
 		\item R object (eg plot) $\rightarrow$ cf. tutorial/lesson4
 		\begin{itemize}
 			\item \texttt{\*Output} functions create R objects
-			\item The function arg has to match label in \texttt{server.R}
+			\item The arg \texttt{\*Output}  has to match label in \texttt{server.R}
 		\end{itemize}
 
 	\end{itemize}
 
 
-	% 	http://shiny.rstudio.com/articles/layout-guide.html
 
 }
 
@@ -63,41 +77,46 @@
 \frame{
 	\frametitle{server: R code that builds objects}
 
+	\textbf{Build R objects in shinyServer function}
+	\vspace*{\baselineskip} % --------------------------------------------------
 
-	`Hello Shiny' Example
 	\begin{itemize}
-		\item output\$\* in shinyServer{} $\rightarrow$ List of R objects
-	\end{itemize}
+		\item The output `list' stores R objects
+			\begin{itemize}
+				\item \texttt{render} function $\rightarrow$ tutorial/lesson4
+				\item Element name labels R object and should match argument of 
+					  \texttt{Output} function in \texttt{ui.R}
+			\end{itemize}
+		\item The input `list' stores values of widgets
+		\begin{itemize}
+			\item Call a widget value inside a render function using the label
+			  of the widget (Input function argument)
+		\end{itemize}
 
-	List of R objects
-	\begin{itemize}
-		\item render\* functions: tutorial/lesson4
-		\item output\*X : X is argument of corresponding Output function in ui.R
-		\item Code is reactive if code in render\* includes widget value
-		\item widget value is called with input\*Widget Label
 	\end{itemize}
-
 
 
 }
 
-
-
 \frame{
-	\frametitle{Execution}
+	\frametitle{server: Execution of commands }
 
 	Where you put code in server.R determines how many times run
+
+	Execution of commands in server $\rightarrow$ cf. tutorial/lesson5/
+	\vspace*{\baselineskip} % --------------------------------------------------
+
+
 	\begin{itemize}
-		\item Outside of \texttt{shinyServer{}} : Run once (library,load,source)
+	
+		\item \textbf{Outside of shinyServer}: Run once (eg. library, load, source)
 
-		\item In shinyServer run once a user visits app: eg. object records session info
+		\item \textbf{In shinyServer}: Run once a user visits app (eg. record session info)
 
-		\item  render : Run each time user changes a widget 
-
+		\item \textbf{In render}: Run each time user changes a widget 
+		
 	\end{itemize}
 
-
-	http://shiny.rstudio.com/tutorial/lesson5/
 
 }
 
