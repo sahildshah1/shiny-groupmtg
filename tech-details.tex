@@ -10,7 +10,6 @@
 	
 	 \vspace*{\baselineskip} % --------------------------------------------------
 
-
 	 \begin{center}OR\end{center}
 	 \vspace*{\baselineskip} % --------------------------------------------------
 
@@ -28,9 +27,12 @@
 \frame{
 	\frametitle{Structure of a Shiny app}
 
+	Each app needs its own directory
+
+	\vspace*{\baselineskip} % --------------------------------------------------
+
 	Two R scripts saved together in a directory
 	\begin{itemize}
-		\item Each app needs its own directory
 		\item \texttt{ui.R} : controls layout and appearance of app
 		\item \texttt{server.R}: contains instructions needed to build app
 	\end{itemize}
@@ -64,16 +66,16 @@
 	\vspace*{\baselineskip} % --------------------------------------------------
 
 	\begin{itemize}
-		\item widgets (eg slider) $\rightarrow$ cf. tutorial/lesson3
+		\item widgets (eg. slider) $\rightarrow$ cf. tutorial/lesson3
 		\begin{itemize}
-			\item \*Input functions create widgets 
-			\item Access widget value in R object with the \texttt{label} arg
+			\item \texttt{*Input} functions create widgets 
+			\item Access widget value in R object with the widget's label
 		\end{itemize}
 
-		\item R object (eg plot) $\rightarrow$ cf. tutorial/lesson4
+		\item R object (eg. plot) $\rightarrow$ cf. tutorial/lesson4
 		\begin{itemize}
-			\item \*Output functions create R objects
-			\item The arg \*Output has to match label in \texttt{server.R}
+			\item \texttt{*Output} functions create R objects
+			\item The arg of \texttt{*Output} has to match R object's label in \texttt{server.R}
 		\end{itemize}
 
 	\end{itemize}
@@ -92,14 +94,13 @@
 	\begin{itemize}
 		\item The output `list' stores R objects
 			\begin{itemize}
-				\item render\* function: instructions to create object $\rightarrow$ tutorial/lesson4
+				\item \texttt{render*} function: instructions to create object $\rightarrow$ tutorial/lesson4
 				\item Element name labels R object and should match argument of 
-					  \*Output function in \texttt{ui.R}
+					  \texttt{*Output} function in \texttt{ui.R}
 			\end{itemize}
 		\item The input `list' stores values of widgets
 		\begin{itemize}
-			\item Call a widget value inside a render function using the label
-			  of the widget (Input function argument)
+			\item Call a widget value inside a \texttt{render*} function using the label of the widget
 		\end{itemize}
 
 	\end{itemize}
@@ -122,7 +123,7 @@
 
 		\item \textbf{In shinyServer}: Run once a user visits app (eg. record session info)
 
-		\item \textbf{In render}: Run each time user changes a widget 
+		\item \textbf{In render*}: Run each time user changes a widget 
 		
 	\end{itemize}
 
