@@ -14,6 +14,6 @@ larger Shiny apps.
 
 ---
 
-View the **[skeleton app]((https://github.com/sahildshah1/shiny-groupmtg/tree/master/skeleton-app)**
+View the **[skeleton app](https://github.com/sahildshah1/shiny-groupmtg/tree/master/skeleton-app)**
 
 Example directory / file structure 
