@@ -1,4 +1,4 @@
-## Shiny: Analyses → Interactive Apps
+**Shiny: Analyses → Interactive Apps**
 
 Sahil Shah
 sahil.shah AT u.northwestern DOT edu
@@ -13,3 +13,5 @@ This presentation introduces Shiny, building a Shiny app, and customizing /manag
 larger Shiny apps.
 
 * [Skeleton App](https://github.com/sahildshah1/shiny-groupmtg/tree/master/skeleton-app)
+
+Example directory / file structure 
