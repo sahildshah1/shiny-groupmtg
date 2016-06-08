@@ -7,11 +7,13 @@ Presented on Wed, 6/18/16 at Braun Research Group Meeting
 
 ---
 
-* [Slides](https://github.com/sahildshah1/shiny-groupmtg/blob/master/figs/main.pdf)
+View the **[slides](https://github.com/sahildshah1/shiny-groupmtg/blob/master/figs/main.pdf)**
 
 This presentation introduces Shiny, building a Shiny app, and customizing /managing 
 larger Shiny apps.
 
-* [Skeleton App](https://github.com/sahildshah1/shiny-groupmtg/tree/master/skeleton-app)
+---
+
+View the **[skeleton app]((https://github.com/sahildshah1/shiny-groupmtg/tree/master/skeleton-app)**
 
 Example directory / file structure 
